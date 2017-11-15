@@ -24,7 +24,7 @@ class ListItem extends Component {
   render() {
     const { title, description, url } = this.props;
     return(
-      <tr>
+      <tr className="one">
         <td>{ title }</td>
         <td>{ description }</td>
         <td>{ url }</td>
