@@ -50,7 +50,7 @@ export default App;
 
 const Home = () => (
   <div>
-    <View bunnies={this.state.bunnies} view={this.state.view} handleUpdateView={this.handleUpdateView}/>
-    {/* <h3>hey bunny</h3> */}
+    {/* <View bunnies={this.state.bunnies} view={this.state.view} handleUpdateView={this.handleUpdateView}/> */}
+    <h3>hey bunny</h3>
   </div>
 )
