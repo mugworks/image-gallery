@@ -17,12 +17,12 @@ class App extends Component {
         {
           title: 'bunny2',
           description: 'great',
-          url: 'bunny.jpg',
+          url: 'http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-25__605.jpg',
         },
         {
           title: 'bunny3',
           description: 'good',
-          url: 'rabbit.jpg',
+          url: 'http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-110__605.jpg',
         },
       ],
       view: 'list'
