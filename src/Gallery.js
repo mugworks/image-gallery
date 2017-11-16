@@ -4,29 +4,36 @@ export default class Gallery extends Component {
   constructor() {
     super();
     this.state = {
-      imgIndex: 0, 
-      value: true
+      index: 0, 
+      valueLeft: true,
+      valueRight: false
     };
   }
-	
-  handleNextImage(index, bunnies) {
-    index = index + 1;
-    if (index === bunnies.length - 1) {
-      console.log('before setstate1', bunnies.length);
-      this.setState({ value: false });
-      console.log('before setstate2', bunnies.length);
-    }
-    this.setState({ imgIndex: index });
-    console.log('afer setstate', bunnies.length);
+
+  handlePreviousImage() {
+    this.setState((prevState) => {
+      const index = prevState.index - 1;
+      const valueLeft = (index === 0) ? true : false;
+      return { index, valueLeft };
+    });
   }
+
+  handleNextImage() {
+    this.setState((prevState, props) => {
+      const index = prevState.index + 1;
+      const valueRight = (index === props.bunnies.length - 1) ? false : true;
+      return { index, valueRight };
+    });
+  }
+
 
   render() {
     const { bunnies } = this.props;
     return(
       <div>
-        <button className="previous" disabled={!this.state.value} onClick={() => this.handlePreviousImage(this.state.imgIndex, bunnies)}>Previous</button>
-        <img alt="bunny" src={bunnies[this.state.imgIndex].url}/>
-        <button className="next" disabled={!this.state.value} onClick={() => this.handleNextImage(this.state.imgIndex, bunnies)}>Next</button>
+        <button className="previous" disabled={this.state.valueLeft} onClick={() => this.handlePreviousImage()}>Previous</button>
+        <img alt="bunny" src={bunnies[this.state.index].url}/>
+        <button className="next" disabled={this.state.valueRight} onClick={() => this.handleNextImage()}>Next</button>
       </div>
     );
   }
