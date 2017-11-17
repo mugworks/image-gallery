@@ -1,16 +1,14 @@
-// import React, { Component } from 'react';
+import React, { Component } from 'react';
 
-// export default class Thumbnail extends Component {
-//   render() {
-//     const { bunnies } = this.props;
+export default class Thumbnail extends Component {
+  render() {
+    const { bunnies } = this.props;
 
-//     return(
-//       {bunnies.map((bunny) => <img src={bunny.url}/>
-//     );
-//   }
+    return(
+      <div>
+        {bunnies.map((bunny) => <img className="thumbnail" alt={bunny.title} src={bunny.url}/>)}
+      </div>
+    );
+  }
 
-// }
-// // src={bunnies[0].url}
-// <tbody>
-//           {bunnies.map((bunny) => <ListItem title={bunny.title} description={bunny.description} url={bunny.url}/>)}
-//         </tbody>
+}

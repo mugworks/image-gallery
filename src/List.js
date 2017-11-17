@@ -9,7 +9,6 @@ export default class List extends Component {
           <tr>
             <th>Title</th>
             <th>Description</th>
-            <th>Url</th>
           </tr>
         </thead>
         <tbody>
@@ -25,9 +24,8 @@ class ListItem extends Component {
     const { title, description, url } = this.props;
     return(
       <tr className="one">
-        <td>{ title }</td>
+        <td><a href={url}>{ title }</a></td>
         <td>{ description }</td>
-        <td>{ url }</td>
       </tr>
     );
   }
