@@ -11,18 +11,20 @@ export default class Gallery extends Component {
   }
 
   handlePreviousImage() {
-    this.setState((prevState) => {
+    this.setState((prevState, props) => {
       const index = prevState.index - 1;
       const valueLeft = (index === 0) ? true : false;
-      return { index, valueLeft };
+      const valueRight = (index < props.bunnies.length) ? false : true;
+      return { index, valueLeft, valueRight };
     });
   }
 
   handleNextImage() {
     this.setState((prevState, props) => {
       const index = prevState.index + 1;
-      const valueRight = (index === props.bunnies.length - 1) ? false : true;
-      return { index, valueRight };
+      const valueRight = (index < (props.bunnies.length - 1)) ? false : true;
+      const valueLeft = (index > 0) ? false : true;
+      return { index, valueRight, valueLeft };
     });
   }
 

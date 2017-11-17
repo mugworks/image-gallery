@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import View from './View';
-import { 
-  BrowserRouter as Router, 
-  Route, Switch } from 'react-router-dom';
+// import Gallery from './Gallery';
 
 	
 class App extends Component {	
@@ -32,25 +30,15 @@ class App extends Component {
   }
 	
 	handleUpdateView = (view) => {
+	  console.log('handle updateview', view);
 	  this.setState({ view });	
 	}
 	
 	render(){
 	  return(
-	  
-	    <Router>
-	      <Switch>
-	        <Route exact path="/" component={Home}/>
-	      </Switch>
-	    </Router>
+	    <View bunnies={this.state.bunnies} view={this.state.view} handleUpdateView={this.handleUpdateView}/>
+	  // <Gallery/>
 	  );
 	}
 }
 export default App;
-
-const Home = () => (
-  <div>
-    <View bunnies={this.state.bunnies} view={this.state.view} handleUpdateView={this.handleUpdateView}/>
-    {/* <h3>hey bunny</h3> */}
-  </div>
-)
