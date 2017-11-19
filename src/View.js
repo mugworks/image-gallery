@@ -65,10 +65,10 @@ class View extends Component {
     const SelectedView = Views[view];
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <h1 className="App-title">Cute Bunnies!</h1>
-        </header>
-        <div>
+        </header> */}
+        {/* <div> */}
           <p className="App-intro">
             Select which view of cute bunnies you would like.
           </p>
@@ -76,7 +76,7 @@ class View extends Component {
           
           
           <SelectedView bunnies={bunnies} onRemove={this.handleRemoveImg} onAddImg={this.handleAddImg}/>
-        </div>
+        {/* </div> */}
       </div>
     );
   }
