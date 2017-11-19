@@ -46,7 +46,7 @@ class View extends Component {
   }
 
   handleUpdateView = (view) => {
-	  this.setState({ view });	
+    this.setState({ view });	
   }
   
   handleRemoveImg = id => {
@@ -84,10 +84,10 @@ class View extends Component {
 
 export default View;
 
-View.proptypes = {
+View.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  url: PropTypes.strings,
+  url: PropTypes.string,
   handleAddImg: PropTypes.func,
   handleRemoveImg: PropTypes.func,
   handleUpdateView: PropTypes.func,
