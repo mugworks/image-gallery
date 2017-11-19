@@ -5,10 +5,9 @@ export default class Thumbnail extends Component {
     const { bunnies } = this.props;
 
     return(
-      <div>
-        {bunnies.map((bunny) => <img className="thumbnail" alt={bunny.title} src={bunny.url}/>)}
+      <div className="thumbnail">
+        {bunnies.map((bunny) => <div key={bunny._id}><figcaption>{bunny.title}</figcaption><img className="thumbnail-img"  alt={bunny.title} src={bunny.url}/></div>)}
       </div>
     );
   }
-
 }

@@ -32,7 +32,16 @@ img {
 }
 
 .thumbnail {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 60%;
+  margin: 10px; 
+}
+
+.thumbnail-img {
   height: 100px;
+  margin: 0px 25px;
 }
 
 .button {
