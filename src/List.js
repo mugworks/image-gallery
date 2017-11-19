@@ -9,10 +9,9 @@ export default class List extends Component {
     const { bunnies, onRemove, onAddImg } = this.props;
     return(
       <div>
-        <table>
+        <table id="table">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Title</th>
               <th>Description</th>
               <th></th>
@@ -34,11 +33,10 @@ class ListItem extends Component {
   render() {
     const { id, title, description, url, onRemove } = this.props;
     return(
-      <tr className="one">
-        <td>{ id }</td>
+      <tr>
         <td><a href={url}>{ title }</a></td>
         <td>{ description }</td>
-        <td><button onClick={() => onRemove(id)}>Remove</button></td>
+        <td><button className="button remove" onClick={() => onRemove(id)}>Remove</button></td>
       </tr>
     );
   }
@@ -49,7 +47,7 @@ class AddImg extends Component {
   render() {
     const { onAddImg } = this.props;
     return (
-      <form onSubmit={event => {
+      <form id="form" onSubmit={event => {
         event.preventDefault();
         const { elements } = event.target;
         const addedImage = {
@@ -62,13 +60,17 @@ class AddImg extends Component {
         elements.description.value='';
         elements.url.value='';
       }}>
-        <label>Image Title: </label>
-        <input name="title"/>
-        <label>Description: </label>
-        <input name="description"/>
-        <label>Url: </label>
-        <input name="url"/>
-        <button type="submit">Add</button>
+        <fieldset>
+          <legend>Add an image</legend>
+          <label>Image Title: </label>
+          <input id="form-input" name="title"/>
+          <label>Description: </label>
+          <input id="form-input" name="description"/>
+          <br/>
+          <label>Url: </label>
+          <input id="form-input" name="url"/>
+          <button className="button add" type="submit">Add</button>
+        </fieldset>
       </form>
     ); 
   }

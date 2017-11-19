@@ -24,20 +24,20 @@ class View extends Component {
       bunnies: [
         {
           _id: v1(),
-          title: 'bunny1',
-          description: 'cute',
+          title: 'Harlequin Bunny',
+          description: 'This harlequin bunny artfully poses for a picture.',
           url: 'http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg',
         }, 
         {
           _id: v1(),
-          title: 'bunny2',
-          description: 'great',
+          title: 'Resting Rabbit',
+          description: 'Ready to cuddle?',
           url: 'http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-25__605.jpg',
         },
         {
           _id: v1(),
-          title: 'bunny3',
-          description: 'good',
+          title: 'Snow Bunny',
+          description: 'You would have trouble finding this bunny on a snowy day.',
           url: 'http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-110__605.jpg',
         },
       ],
