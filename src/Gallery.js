@@ -33,10 +33,14 @@ export default class Gallery extends Component {
   render() {
     const { bunnies } = this.props;
     return(
-      <div>
-        <button className="previous" disabled={this.state.valueLeft} onClick={() => this.handlePreviousImage()}>Previous</button>
-        <img alt="bunny" src={bunnies[this.state.index].url}/>
-        <button className="next" disabled={this.state.valueRight} onClick={() => this.handleNextImage()}>Next</button>
+      <div id="gallery-container">
+        <button className="button previous" disabled={this.state.valueLeft} onClick={() => this.handlePreviousImage()}><arrow className="arrow left"></arrow>  Previous</button>
+        <section>
+          <img alt="bunny" src={bunnies[this.state.index].url}/>
+          <figcaption>{bunnies[this.state.index].title}</figcaption>
+          <figcaption>{bunnies[this.state.index].description}</figcaption>
+        </section>
+        <button className="button next" disabled={this.state.valueRight} onClick={() => this.handleNextImage()}>Next  <arrow className="arrow right"></arrow></button>
       </div>
     );
   }
