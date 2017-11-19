@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Gallery extends Component {
   constructor() {
@@ -40,3 +41,10 @@ export default class Gallery extends Component {
     );
   }
 }
+
+Gallery.proptypes = {
+  valueLeft: PropTypes.boolean,
+  valueRight: PropTypes.boolean,
+  handlePreviousImage: PropTypes.func,
+  handleNextImage: PropTypes.func
+};

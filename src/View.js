@@ -87,6 +87,9 @@ export default View;
 View.proptypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  url: PropTypes.stringgs
-  
+  url: PropTypes.strings,
+  handleAddImg: PropTypes.func,
+  handleRemoveImg: PropTypes.func,
+  handleUpdateView: PropTypes.func,
+  view: PropTypes.string
 };
