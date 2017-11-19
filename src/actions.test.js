@@ -23,6 +23,6 @@ it('remove an image by id', () => {
   const id = state.bunnies[0]._id;
   const newState = removeImg(state, id);
   expect(newState).toEqual({
-    bunnies: [state.bunnies[1], state.bunnies[2]]
+    bunnies: [state.bunnies[1]]
   });
 });

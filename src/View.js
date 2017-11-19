@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { v1 } from 'uuid';
 import { removeImg } from './actions';
+import { addImg } from './actions';
 
 import List from './List';
 import Thumbnail from './Thumbnail';
@@ -49,7 +51,11 @@ class View extends Component {
   
   handleRemoveImg = id => {
     const newState = removeImg(this.state, id);
-    console.log('in the handleremoveimg', newState);
+    this.setState(newState);
+  }
+
+  handleAddImg = (elements) => {
+    const newState = addImg(this.state, elements);
     this.setState(newState);
   }
   
@@ -69,7 +75,7 @@ class View extends Component {
           {views.map((view) => <button key={view} className="button" onClick={() => this.handleUpdateView(view)}>{view[0].toUpperCase()+view.slice(1)}</button>)}
           
           
-          <SelectedView bunnies={bunnies} onRemove={this.handleRemoveImg}/>
+          <SelectedView bunnies={bunnies} onRemove={this.handleRemoveImg} onAddImg={this.handleAddImg}/>
         </div>
       </div>
     );
@@ -77,3 +83,10 @@ class View extends Component {
 }
 
 export default View;
+
+View.proptypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  url: PropTypes.stringgs
+  
+};
