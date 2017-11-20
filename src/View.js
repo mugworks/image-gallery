@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { v1 } from 'uuid';
@@ -69,13 +70,13 @@ class View extends Component {
           <h1 className="App-title">Cute Bunnies!</h1>
         </header> */}
         {/* <div> */}
-          <p className="App-intro">
+        <p className="App-intro">
             Select which view of cute bunnies you would like.
-          </p>
-          {views.map((view) => <button key={view} className="button" onClick={() => this.handleUpdateView(view)}>{view[0].toUpperCase()+view.slice(1)}</button>)}
+        </p>
+        {views.map((view) => <button key={view} className="button" onClick={() => this.handleUpdateView(view)}>{view[0].toUpperCase()+view.slice(1)}</button>)}
           
           
-          <SelectedView bunnies={bunnies} onRemove={this.handleRemoveImg} onAddImg={this.handleAddImg}/>
+        <SelectedView bunnies={bunnies} onRemove={this.handleRemoveImg} onAddImg={this.handleAddImg}/>
         {/* </div> */}
       </div>
     );
