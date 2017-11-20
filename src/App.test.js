@@ -12,48 +12,23 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
 });
 
-it('renders a snapshot', () => {
-  // View.handleUpdateView('gallery');
+it('renders a snapshot of View', () => {
   const tree = renderer.create(<View/>).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
-// it ('renders a snapshot', () => {
-//   const tree = renderer.create(<List/>).toJSON();
-//   expect(tree).toMatchSnapshot();
-// });
+it ('renders a snapshot of List', () => {
+  const tree = renderer.create(<List bunnies={[]} onRemove={() =>{}} onAddImg={() =>{}}/>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
-// import React from 'react';
-// import { shallow } from 'enzyme';
-// import toJSON from 'enzyme-to-json';
-// import View from './View';
+it ('renders a snapshot of Thumbnail', () => {
+  const tree = renderer.create(<Thumbnail bunnies={[]}/>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
-// describe('App', () => {
-
-//   it('should render View View', () => {
-//     const wrapper=shallow(<View/>);
-//     expect(toJSON(wrapper)).toMatchSnapshot();
-//   });
-// });
-
-// import React from 'react';
-// import { shallow, mount } from 'enzyme';
-// import toJSON from 'enzyme-to-json';
-// import { Gallery } from './Gallery';
-// import View from './View';
-
-
-// describe('App', () => {
-
-  // it('should render Gallery View', () => {
-  //   const wrapper=shallow(<Gallery valueLeft="true"/>);
-  //   expect(toJSON(wrapper)).toMatchSnapshot();
-  // });
-
-//   it('renders a snapshot', () => {
-//     // View.handleUpdateView('gallery');
-//     const wrapper = shallow(<View/>);
-//     expect(toJSON(wrapper)).toMatchSnapshot();
-//   });
-// });
+it ('renders a snapshot of Gallery', () => {
+  const tree = renderer.create(<Gallery bunnies={[]}/>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
 

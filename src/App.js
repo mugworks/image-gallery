@@ -6,13 +6,11 @@ import View from './View';
 	
 class App extends Component {	
   
-	
-	
-	
-	render(){
-	  return(
-	    <View/>
-	  );
-	}
-}
+  render(){
+    return(
+      <View title="title" url="url"/>
+    );
+  }
+}	
+
 export default App;
