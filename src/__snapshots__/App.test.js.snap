@@ -223,6 +223,45 @@ exports[`renders a snapshot 3`] = `
 />
 `;
 
+exports[`renders a snapshot of Gallery 1`] = `
+<div
+  id="gallery-container"
+>
+  <button
+    className="button previous"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <arrow
+      className="arrow left"
+    />
+      Previous
+  </button>
+  <section>
+    <img
+      alt="bunny"
+      src="http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg"
+    />
+    <figcaption>
+      Harlequin Bunny
+    </figcaption>
+    <figcaption>
+      This harlequin bunny artfully poses for a picture.
+    </figcaption>
+  </section>
+  <button
+    className="button next"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Next  
+    <arrow
+      className="arrow right"
+    />
+  </button>
+</div>
+`;
+
 exports[`renders a snapshot of List 1`] = `
 <div>
   <table

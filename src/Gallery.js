@@ -47,8 +47,8 @@ export default class Gallery extends Component {
 }
 
 Gallery.propTypes = {
-  // valueLeft: PropTypes.boolean,
-  // valueRight: PropTypes.boolean,
+  valueLeft: PropTypes.bool,
+  valueRight: PropTypes.bool,
   handlePreviousImage: PropTypes.func,
   handleNextImage: PropTypes.func
 };

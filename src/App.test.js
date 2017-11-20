@@ -28,7 +28,13 @@ it ('renders a snapshot of Thumbnail', () => {
 });
 
 it ('renders a snapshot of Gallery', () => {
-  const tree = renderer.create(<Gallery bunnies={[]}/>).toJSON();
+  const bunny = {
+    _id: 3454,
+    title: 'Harlequin Bunny',
+    description: 'This harlequin bunny artfully poses for a picture.',
+    url: 'http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg',
+  };
+  const tree = renderer.create(<Gallery bunnies={[bunny]}/>).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
