@@ -19,8 +19,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
-            <Route path="/views" component={View}/>
-            <Route path="/images" component={Image}/>
+            <Route path="/images/:view?" component={View}/>
             <Redirect to="/"/>
           </Switch>
         </div>
@@ -32,9 +31,8 @@ class App extends Component {
 export default App;
 
 const Home = () => (
-  <div>
-    <View/>
-    <Link to="/views"></Link>
+  <div id="intro">
+    <Link to="/images">Welcome to the bunny page.</Link>
   </div>
 );
 
@@ -44,5 +42,3 @@ const About = () => (
     <p>Bunnies are spectacularly cute. But did you know that when a home houses 50 bunnies, the home is spectacularly smelly?</p>
   </div>
 );
-
-

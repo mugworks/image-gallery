@@ -34,21 +34,21 @@ export default class Gallery extends Component {
     const { bunnies } = this.props;
     return(
       <div id="gallery-container">
-        <button className="button previous" disabled={this.state.valueLeft} onClick={() => this.handlePreviousImage()}><arrow className="arrow left"></arrow>  Previous</button>
+        <button className="button previous" disabled={this.state.valueLeft} onClick={() => this.handlePreviousImage()}>&larr;Previous</button>
         <section>
           <img alt="bunny" src={bunnies[this.state.index].url}/>
           <figcaption>{bunnies[this.state.index].title}</figcaption>
           <figcaption>{bunnies[this.state.index].description}</figcaption>
         </section>
-        <button className="button next" disabled={this.state.valueRight} onClick={() => this.handleNextImage()}>Next  <arrow className="arrow right"></arrow></button>
+        <button className="button next" disabled={this.state.valueRight} onClick={() => this.handleNextImage()}>Next&rarr;</button>
       </div>
     );
   }
 }
 
 Gallery.propTypes = {
-  valueLeft: PropTypes.boolean,
-  valueRight: PropTypes.boolean,
+  valueLeft: PropTypes.bool,
+  valueRight: PropTypes.bool,
   handlePreviousImage: PropTypes.func,
   handleNextImage: PropTypes.func
 };
