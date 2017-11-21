@@ -12,9 +12,27 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
 });
 
-it('renders a snapshot', () => {
-  const tree = renderer.create(<View/>).toJSON();
+it ('renders a snapshot of List', () => {
+  const tree = renderer.create(<List bunnies={[]} onRemove={() =>{}} onAddImg={() =>{}}/>).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+it ('renders a snapshot of Thumbnail', () => {
+  const tree = renderer.create(<Thumbnail bunnies={[]}/>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it ('renders a snapshot of Gallery', () => {
+  const bunny = {
+    _id: 3454,
+    title: 'Harlequin Bunny',
+    description: 'This harlequin bunny artfully poses for a picture.',
+    url: 'http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg',
+  };
+  const tree = renderer.create(<Gallery bunnies={[bunny]}/>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+
 
 

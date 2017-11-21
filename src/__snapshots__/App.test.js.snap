@@ -157,3 +157,101 @@ exports[`renders a snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`renders a snapshot of Gallery 1`] = `
+<div
+  id="gallery-container"
+>
+  <button
+    className="button previous"
+    disabled={true}
+    onClick={[Function]}
+  >
+    ←Previous
+  </button>
+  <section>
+    <img
+      alt="bunny"
+      src="http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg"
+    />
+    <figcaption>
+      Harlequin Bunny
+    </figcaption>
+    <figcaption>
+      This harlequin bunny artfully poses for a picture.
+    </figcaption>
+  </section>
+  <button
+    className="button next"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Next→
+  </button>
+</div>
+`;
+
+exports[`renders a snapshot of List 1`] = `
+<div>
+  <table
+    id="table"
+  >
+    <thead>
+      <tr>
+        <th>
+          Title
+        </th>
+        <th>
+          Description
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <form
+    id="form"
+    onSubmit={[Function]}
+  >
+    <fieldset>
+      <legend>
+        Add an image
+      </legend>
+      <label>
+        Image Title: 
+      </label>
+      <input
+        id="form-input"
+        name="title"
+      />
+      <label>
+        Description: 
+      </label>
+      <input
+        id="form-input"
+        name="description"
+      />
+      <br />
+      <label>
+        Url: 
+      </label>
+      <input
+        id="form-input"
+        name="url"
+      />
+      <button
+        className="button add"
+        type="submit"
+      >
+        Add
+      </button>
+    </fieldset>
+  </form>
+</div>
+`;
+
+exports[`renders a snapshot of Thumbnail 1`] = `
+<div
+  className="thumbnail"
+/>
+`;
