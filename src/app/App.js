@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import View from './View';
+import View from '../views/View';
 import { 
   BrowserRouter as Router, 
   Route, Switch, Redirect, Link } from 'react-router-dom';

@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { v1 } from 'uuid';
-import { removeImg } from './actions';
-import { addImg } from './actions';
+import { removeImg } from '../actions';
+import { addImg } from '../actions';
 
 import List from './List';
 import Thumbnail from './Thumbnail';
