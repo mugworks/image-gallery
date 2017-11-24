@@ -46,6 +46,12 @@ class View extends Component {
     };
   }
 
+  async componentDidMount() {
+    const bunnies = await fetch('/api/images').then(response => response.json());
+    const newState = { ...this.state, bunnies };
+    this.setState(newState);
+  }
+
   handleUpdateView = (view) => {
     this.setState({ view });	
   }
