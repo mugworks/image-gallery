@@ -63,12 +63,12 @@ class AddImg extends Component {
         <fieldset>
           <legend>Add an image</legend>
           <label>Image Title: </label>
-          <input id="form-input" name="title"/>
+          <input className="form-input" name="title"/>
           <label>Description: </label>
-          <input id="form-input" name="description"/>
+          <input className="form-input" name="description"/>
           <br/>
           <label>Url: </label>
-          <input id="form-input" name="url"/>
+          <input className="form-input" name="url"/>
           <button className="button add" type="submit">Add</button>
         </fieldset>
       </form>

@@ -37,7 +37,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 60%;
-  margin: 10px; 
+  margin: 10px auto; 
 }
 
 .thumbnail-img {
@@ -103,10 +103,10 @@ img {
   padding: 20px;
 }
 
-#form-input {
+.form-input {
   width: 30%;
   background-color: #f2f2f2;
-  color: white;
+  color: rgb(122, 27, 27);
   padding: 14px;
   margin: 8px 0;
   border: none;
