@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { v1 } from 'uuid';
 import { removeImg } from './actions';
@@ -42,7 +43,6 @@ class View extends Component {
           url: 'http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-110__605.jpg',
         },
       ],
-      view: 'list'
     };
   }
 
@@ -62,22 +62,18 @@ class View extends Component {
   
   
   render() {
-    const { bunnies, view } = this.state;
+    const { bunnies } = this.state;
+    const { view = 'list' } = this.props.match.params;
+
     const SelectedView = Views[view];
     return (
       <div className="App">
-        {/* <header className="App-header">
-          <h1 className="App-title">Cute Bunnies!</h1>
-        </header> */}
-        {/* <div> */}
         <p className="App-intro">
             Select which view of cute bunnies you would like.
         </p>
-        {views.map((view) => <button key={view} className="button" onClick={() => this.handleUpdateView(view)}>{view[0].toUpperCase()+view.slice(1)}</button>)}
-          
+        {views.map((view) => <li key={view} className="links"><Link to={`/images/${view}`}>{view}</Link></li>)}  
           
         <SelectedView bunnies={bunnies} onRemove={this.handleRemoveImg} onAddImg={this.handleAddImg}/>
-        {/* </div> */}
       </div>
     );
   }
