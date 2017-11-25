@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import View from '../views/View';
+import Albums from '../views/Albums';
 import { 
   BrowserRouter as Router, 
   Route, Switch, Redirect, Link } from 'react-router-dom';
@@ -19,6 +20,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
+            <Route exact path="/albums" component={Albums}/>
             <Route path="/images/:view?" component={View}/>
             <Redirect to="/"/>
           </Switch>

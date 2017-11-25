@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { v1 } from 'uuid';
+// import { v1 } from 'uuid';
 import { removeImg } from '../actions';
 import { addImg } from '../actions';
 
@@ -55,16 +55,6 @@ class View extends Component {
   handleUpdateView = (view) => {
     this.setState({ view });	
   }
-  
-  // handleRemoveImg = id => {
-  //   const newState = removeImg(this.state, id);
-  //   this.setState(newState);
-  // }
-
-  // handleAddImg = (bunny) => {
-  //   const newState = addImg(this.state, bunny);
-  //   this.setState(newState);
-  // }
 
   handleRemoveImg = async id => {
     await fetch(`/api/images/${id}`, {

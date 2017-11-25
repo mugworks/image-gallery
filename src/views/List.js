@@ -18,12 +18,10 @@ export default class List extends Component {
             </tr>
           </thead>
           <tbody>
-            {/* {bunnies.map(bunny => <ListItem key={bunny._id} id={bunny._id} title={bunny.title} description={bunny.description} url={bunny.url} onRemove={onRemove}/>)} */}
-            {bunnies.map(bunny => <ListItem key={bunny._id} id={bunny._id} title={bunny.title} url={bunny.url} onRemove={onRemove}/>)}
+            {bunnies.map(bunny => <ListItem key={bunny._id} id={bunny._id} title={bunny.title} description={bunny.description} url={bunny.url} onRemove={onRemove}/>)}
           </tbody>
         </table>
-        <AddImg onAddImg={onAddImg}/>
-        
+        <AddImg onAddImg={onAddImg}/>   
       </div>
     );
   }

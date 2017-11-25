@@ -15,6 +15,8 @@ export default function Header() {
         </li>
         <li><HeaderLink exact to="/about">About</HeaderLink>
         </li>
+        <li><HeaderLink exact to="/albums">Albums</HeaderLink>
+        </li>
         <li><HeaderLink exact to="/images">Images</HeaderLink>
         </li>
       </nav>
