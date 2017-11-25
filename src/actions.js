@@ -28,6 +28,6 @@ export function addImg(state, addedImg) {
 const createBunny = addedImg => ({
   // _id: v1(),
   title: addedImg.title,
-  // description: addedImg.description,
+  description: addedImg.description,
   url: addedImg.url
 });
