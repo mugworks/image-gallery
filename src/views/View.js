@@ -56,13 +56,34 @@ class View extends Component {
     this.setState({ view });	
   }
   
-  handleRemoveImg = id => {
+  // handleRemoveImg = id => {
+  //   const newState = removeImg(this.state, id);
+  //   this.setState(newState);
+  // }
+
+  // handleAddImg = (bunny) => {
+  //   const newState = addImg(this.state, bunny);
+  //   this.setState(newState);
+  // }
+
+  handleRemoveImg = async id => {
+    await fetch(`/api/images/${id}`, {
+      method: 'delete'
+    }).then(response => response.json());
     const newState = removeImg(this.state, id);
     this.setState(newState);
   }
 
-  handleAddImg = (elements) => {
-    const newState = addImg(this.state, elements);
+  handleAddImg = async(bunny) => {
+    const bunnyImg = await fetch('/api/images', {
+      method: 'post',
+      body: JSON.stringify(bunny),
+      headers: {
+        'Accept': 'application/json',
+        'Content-type': 'application/json'
+      }
+    }).then(response => response.json());
+    const newState = addImg(this.state, bunnyImg);
     this.setState(newState);
   }
   

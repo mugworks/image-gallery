@@ -1,4 +1,4 @@
-import { v1 } from 'uuid';
+// import { v1 } from 'uuid';
 
 export function removeImg(state, _id) {
   
@@ -26,8 +26,8 @@ export function addImg(state, addedImg) {
 }
 
 const createBunny = addedImg => ({
-  _id: v1(),
+  // _id: v1(),
   title: addedImg.title,
-  description: addedImg.description,
+  // description: addedImg.description,
   url: addedImg.url
 });
