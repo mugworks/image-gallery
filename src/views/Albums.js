@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { addAlbum } from '../action-albums';
 import { removeAlbum } from '../action-albums';
 
@@ -63,7 +64,7 @@ class ListItem extends Component {
     const { id, name, onRemove } = this.props;
     return(
       <tr>
-        <td>{ name }</td>
+        <td><Link to={'/images/list'}>{ name }</Link></td>
         <td><button className="button remove" onClick={() => onRemove(id)}>Remove</button></td>
       </tr>
     );

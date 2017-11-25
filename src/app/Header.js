@@ -17,8 +17,8 @@ export default function Header() {
         </li>
         <li><HeaderLink exact to="/albums">Albums</HeaderLink>
         </li>
-        <li><HeaderLink exact to="/images">Images</HeaderLink>
-        </li>
+        {/* <li><HeaderLink exact to="/images">Images</HeaderLink>
+        </li> */}
       </nav>
     </header> 
   );
