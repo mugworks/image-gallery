@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { addAlbum } from '../action-albums';
+import { removeAlbum } from '../action-albums';
 
 export default class Albums extends Component {
   constructor() {
@@ -28,6 +29,14 @@ export default class Albums extends Component {
     this.setState(newState);
   }
 
+  handleRemoveAlbum = async(id) => {
+    await fetch(`/api/albums/${id}`, {
+      method: 'delete',
+    }).then(response => response.json());
+    const newState = removeAlbum(this.state, id);
+    this.setState(newState);
+  }
+
   render() {
     return(
       <div>
@@ -39,7 +48,7 @@ export default class Albums extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.albums.map(album => <ListItem key={album._id} id={album._id} name={album.name} onRemove={onRemove}/>)}
+            {this.state.albums.map(album => <ListItem key={album._id} id={album._id} name={album.name} onRemove={this.handleRemoveAlbum}/>)}
           </tbody>
         </table>
         <AddAlbum onAddAlbum={this.handleAddAlbum}/>   
@@ -68,7 +77,6 @@ class AddAlbum extends Component {
       <form id="form" onSubmit={event => {
         event.preventDefault();
         const { elements } = event.target;
-        console.log('album', elements);
         const addedAlbum = {
           name: elements.name.value
         };
