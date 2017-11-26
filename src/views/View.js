@@ -43,7 +43,6 @@ class View extends Component {
   }
 
   handleAddImg = async bunny => {
-    console.log('handleAddImg', bunny);
     const bunnyImg = await fetch('/api/images', {
       method: 'post',
       body: JSON.stringify(bunny),
@@ -59,7 +58,6 @@ class View extends Component {
   render() {
     const { bunnies } = this.state; 
     const albumId = this.props.match.params.albumId; 
-    console.log('albumId', albumId);  
     const { view = 'list' } = this.props.match.params;
     const SelectedView = Views[view];
     return (

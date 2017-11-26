@@ -1,42 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { addAlbum } from '../action-albums';
-// import { removeAlbum } from '../action-albums';
+import PropTypes from 'prop-types';
 
 export default class Albums extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     albums: []
-  //   };
-  // }
-
-  // async componentDidMount() {
-  //   const albums = await fetch('/api/albums').then(response => response.json());
-  //   const newState = { ...this.state, albums };
-  //   this.setState(newState);
-  // }
-
-  // handleAddAlbum = async(album) => {
-  //   const albumName = await fetch('/api/albums', {
-  //     method: 'post',
-  //     body: JSON.stringify(album),
-  //     headers: {
-  //       'Accept': 'application/json',
-  //       'Content-type': 'application/json'
-  //     }
-  //   }).then(response => response.json());
-  //   const newState = addAlbum(this.state, albumName);
-  //   this.setState(newState);
-  // }
-
-  // handleRemoveAlbum = async(id) => {
-  //   await fetch(`/api/albums/${id}`, {
-  //     method: 'delete',
-  //   }).then(response => response.json());
-  //   const newState = removeAlbum(this.state, id);
-  //   this.setState(newState);
-  // }
 
   render() {
     const { albums, onAddAlbum, onRemove } = this.props;
@@ -95,3 +61,7 @@ class AddAlbum extends Component {
     ); 
   }
 }
+
+Albums.propTypes = {
+  name: PropTypes.string
+};

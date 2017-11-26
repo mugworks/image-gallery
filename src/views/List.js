@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 export default class List extends Component {  
   render() {
     const { bunnies, onRemove, onAddImg, album } = this.props;
-    console.log('albumIdList', album);
-    // const albumId = this.props.match.params.albumId;
     return(
       <div>
         <table id="table">
@@ -42,8 +40,6 @@ class ListItem extends Component {
 class AddImg extends Component {
   render() {
     const { onAddImg, albumId } = this.props;
-    console.log('albumIdAddImg', albumId);
-    // const albumId = this.props.match.params.albumId;
     return (
       <form id="form" onSubmit={event => {
         event.preventDefault();
@@ -55,7 +51,6 @@ class AddImg extends Component {
           album: albumId
         };
         onAddImg(addedImage);
-        console.log('later', albumId);
         elements.title.value='';
         elements.description.value='';
         elements.url.value='';

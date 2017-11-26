@@ -8,10 +8,6 @@ export function addAlbum(state, addedAlbum) {
   };
 }
 
-// const createAlbum = addedAlbum => ({
-//   name: addedAlbum.name
-// });
-
 export function removeAlbum(state, _id) {
   const { albums } = state;
   const index = albums.findIndex(a => a._id === _id);
