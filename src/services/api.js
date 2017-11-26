@@ -18,7 +18,7 @@ export const ListApi = {
     return fetch('http://localhost:3002/api/images')
       .then(response => response.json());
   },
-  add(List) {
+  add(list) {
     const saved = { ...list, _id: shortid.generate() };
     store.lists.push(saved);
     return Promise.resolve(saved);
