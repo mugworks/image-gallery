@@ -33,5 +33,3 @@ it ('renders a snapshot of Gallery', () => {
 });
 
 
-
-

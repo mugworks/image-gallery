@@ -7,7 +7,6 @@ import {
   BrowserRouter as Router, 
   Route, Switch, Redirect, Link } from 'react-router-dom';
 import Header from './Header';
-
 	
 class App extends Component {	
 
