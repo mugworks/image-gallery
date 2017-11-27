@@ -16,6 +16,7 @@
 
 .App-title {
   font-size: 1.5em;
+  text-align: center;
 }
 
 .App-intro {
@@ -105,7 +106,8 @@ img {
 .form-input {
   width: 30%;
   background-color: #f2f2f2;
-  color: rgb(122, 27, 27);
+
+  color: #000;
   padding: 14px;
   margin: 8px 0;
   border: none;
@@ -119,27 +121,20 @@ img {
   margin-top: 50px;
 }
 
-.arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-
 .next, .previous{
   margin: 5px;
   padding: 5px;
   font-size: 14px;
 }
 
+#about {
+  margin: 50px;
+}
 
+#intro {
+  text-align: center;
+}
+
+#links {
+  padding: 20px;
+}
