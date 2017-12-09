@@ -6,7 +6,7 @@ import View from '../views/View';
 import Albums from '../views/Albums';
 import { 
   BrowserRouter as Router, 
-  Route, Switch, Redirect, Link } from 'react-router-dom';
+  Route, Switch, Redirect } from 'react-router-dom';
 import Header from './Header';
 	
 class App extends Component {	
@@ -63,7 +63,6 @@ class App extends Component {
             <Route exact path="/about" component={About}/>
             <Route exact path="/albums" render={MyAlbums}/>
             <Route path="/albums/:albumId" component={View}/>
-            {/* <Route path="/images/:view?" component={View}/> */}
             <Redirect to="/"/>
           </Switch>
         </div>
@@ -75,7 +74,7 @@ export default App;
 
 const Home = () => (
   <div id="intro">
-    <Link to="/images">Welcome to the bunny page.</Link>
+    <p>Welcome to the bunny page.</p>
   </div>
 );
 
