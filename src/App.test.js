@@ -37,4 +37,8 @@ it ('renders a snapshot of Gallery', () => {
   const tree = renderer.create(<Gallery bunnies={[bunny]}/>).toJSON();
   expect(tree).toMatchSnapshot();
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/mugworks
 
